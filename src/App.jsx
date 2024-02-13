@@ -6,6 +6,7 @@ import { useState } from "react";
 import "./App.css";
 import ExerciseTimer from "./components/ExerciseTimer/ExerciseTmer";
 import BreakTimer from "./components/BreatTimer/BreakTimer";
+import Button from "./components/Button/Button";
 
 function App() {
   const [exercises, setExercises] = useState(
@@ -18,11 +19,17 @@ function App() {
     <>
       <Input exercises={exercises} setExercises={setExercises} />
       <ListOfExercises exercises={exercises} setExercises={setExercises} />
+      <Button
+        onClick={() => {
+          setIsExeRuning(true);
+        }}
+      >
+        Start
+      </Button>
       <div className="timersContainer">
         <ExerciseTimer
           isExeRuning={isExeRuning}
           setIsExeRuning={setIsExeRuning}
-          isBreakRuning={isBreakRuning}
           setIsBreakRuning={setIsBreakRuning}
         />
         <BreakTimer

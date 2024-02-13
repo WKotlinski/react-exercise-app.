@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const BreakTimer = ({
   isExeRuning,
@@ -11,7 +12,7 @@ const BreakTimer = ({
   useEffect(() => {
     let intervalId;
 
-    if (isRunning) {
+    if (isBreakRuning) {
       intervalId = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
       }, 1000);
@@ -20,7 +21,7 @@ const BreakTimer = ({
     return () => {
       clearInterval(intervalId);
     };
-  }, [isRunning]);
+  }, [isBreakRuning]);
 
   return (
     <div>
@@ -28,6 +29,13 @@ const BreakTimer = ({
       <p>Time: {time} seconds</p>
     </div>
   );
+};
+
+BreakTimer.propTypes = {
+  isExeRuning: PropTypes.bool.isRequired,
+  setIsExeRuning: PropTypes.func.isRequired,
+  isBreakRuning: PropTypes.bool.isRequired,
+  setIsBreakRuning: PropTypes.func.isRequired,
 };
 
 export default BreakTimer;
