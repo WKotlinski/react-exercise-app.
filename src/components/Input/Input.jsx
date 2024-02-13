@@ -22,7 +22,7 @@ const Input = ({ exercises, setExercises }) => {
     <div>
       <form action="" onSubmit={handleSubmit}>
         <input type="text" placeholder="Przyklad" name="exerciseInput" />
-        <label htmlFor=""></label>
+        {/* <label htmlFor=""></label> */}
         <button type="submit">Zatwierdź</button>
       </form>
     </div>
