@@ -1,0 +1,52 @@
+/* ListOfExercises.module.css */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #322f2f;
+}
+
+.exerciseCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 5px;
+  margin: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #322f2f;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+}
+.description {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #322f2f;
+}

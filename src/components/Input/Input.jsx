@@ -1,13 +1,21 @@
-import { useState } from "react";
-import exerciseData from "../../assets/arrays/basic_exercises";
+import PropTypes from "prop-types";
 
-const Input = () => {
-  const [exercises, setExercises] = useState(exerciseData);
-
+const Input = ({ exercises, setExercises }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newExercise = e.target.elements.exerciseInput.value;
+    const newExerciseName = e.target.elements.exerciseInput.value;
+    const newExercise = {
+      id: exercises.length + 1,
+      name: newExerciseName,
+      description: "",
+      difficulty: "",
+    };
     setExercises((prev) => [...prev, newExercise]);
+    localStorage.setItem(
+      "exercises",
+      JSON.stringify([...exercises, newExercise])
+    );
+    e.target.reset();
   };
 
   return (
@@ -19,6 +27,11 @@ const Input = () => {
       </form>
     </div>
   );
+};
+
+Input.propTypes = {
+  exercises: PropTypes.array.isRequired,
+  setExercises: PropTypes.func.isRequired,
 };
 
 export default Input;

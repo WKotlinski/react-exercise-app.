@@ -2,13 +2,15 @@ const exercises = [
   {
     id: 1,
     name: "Spięcia brzucha",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc",
     difficulty: "",
   },
   {
     id: 2,
-    name: "Kolaana do klatki piersiowej",
-    description: "",
+    name: "Kolana do klatki piersiowej",
+    description:
+      "Lorem ipsum dolor sit ame  t, consectetur adipiscing elit. Nulla nec odio nec nunc",
     difficulty: "",
   },
   {
